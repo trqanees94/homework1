@@ -70,8 +70,17 @@ ISR=[]
 SS=[]
 SSR=[]
 
+b=np.random.randint(9, size=10)
+print(b)
+insertionsort(b)
+print(b)
+
+#t1=timeit.Timer(lambda:insertionsort(b))
+
 for x in range(1,10):
 	a=np.random.randint(9, size=100*x)  #creates random array length 10 with integers from 0-4
+	
+
 	mergesort(a)	#insertionsort orders array b
 		
 	reverseA=a[::-1]
@@ -79,7 +88,6 @@ for x in range(1,10):
 	t1=timeit.Timer(lambda:selectionsort(a))
 	t2=timeit.Timer(lambda:selectionsort(reverseA))
 
-	#t1=timeit.Timer(lambda:insertionsort(b))
 	#t2=timeit.Timer(lambda:insertionsort(reverseB))
 
 	#t1=timeit.Timer(lambda:mergesort(a))
